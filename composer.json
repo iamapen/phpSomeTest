@@ -1,4 +1,12 @@
 {
+
+    "repositories": [
+      {
+          "type": "vcs",
+          "url": "https://gitrepo.studiopoppy.com/puyo.git"
+      }
+    ],
+
     "require-dev": {
         "phpunit/phpunit": "^7.5"
     },
