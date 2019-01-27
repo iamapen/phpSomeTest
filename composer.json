@@ -11,6 +11,7 @@
         "phpunit/phpunit": "^7.5"
     },
     "require": {
-        "cakephp/validation": "^3.7"
+        "cakephp/validation": "^3.7",
+        "studiopoppy/puyo": "dev-php7"
     }
 }

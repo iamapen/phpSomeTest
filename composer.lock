@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26d786c1b191d713b39165914feb0cbf",
+    "content-hash": "b98520a7a111d00c3bdb0ddef3ceb9b2",
     "packages": [
         {
             "name": "cakephp/core",
@@ -205,6 +205,29 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "studiopoppy/puyo",
+            "version": "dev-php7",
+            "source": {
+                "type": "git",
+                "url": "https://gitrepo.studiopoppy.com/puyo.git",
+                "reference": "125b503b7cba2960e1c1222b8a9821f6f6c0965e"
+            },
+            "require": {
+                "php": "~7.2",
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Puyo\\": "src/Puyo/"
+                }
+            },
+            "time": "2019-01-27T19:42:17+00:00"
         }
     ],
     "packages-dev": [
@@ -1678,7 +1701,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "studiopoppy/puyo": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
