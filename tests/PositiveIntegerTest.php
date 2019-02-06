@@ -60,7 +60,7 @@ class PositiveIntegerTest extends \PHPUnit\Framework\TestCase {
      * スペース含みが許可される
      * 正の整数に+符号が許可される
      * -1が許可される
-     * PHP_INT_MAX +1, PHP_INT_MIN がおかしい
+     * INT範囲外がNG
      * @dataProvider provideParams
      */
     function testFilterVar($a, $ex) {
@@ -85,5 +85,22 @@ class PositiveIntegerTest extends \PHPUnit\Framework\TestCase {
      */
     function testIsGteZeroInteger($a, $ex) {
         $this->assertSame($ex, \Puyo\Util\Strings::isGteZeroInteger($a), "'$a'");
+    }
+
+    /**
+     * Laravel5.5 integer
+     *
+     * +-符号やスペースが許可される
+     * INT範囲外がNG
+     * @dataProvider provideParams
+     */
+    function testLaravelInteger($a, $ex) {
+        $loader = new \Illuminate\Translation\ArrayLoader();
+        $translator = new \Illuminate\Translation\Translator($loader, 'ja');
+
+        $inputs = ['a' => $a];
+        $rules = ['a' => 'integer'];
+        $validator = new \Illuminate\Validation\Validator($translator, $inputs, $rules);
+        $this->assertSame($ex, !$validator->fails(), "'$a'");
     }
 }
