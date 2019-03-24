@@ -15,6 +15,7 @@
         "cakephp/validation": "^3.7",
         "studiopoppy/puyo": "dev-php7",
         "cakephp/utility": "^3.7",
-        "illuminate/validation": "^5.5"
+        "illuminate/validation": "^5.5",
+        "illuminate/support": "^5.5"
     }
 }

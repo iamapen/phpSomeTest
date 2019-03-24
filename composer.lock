@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "321772a9848865e9100683cbcbff72fe",
+    "content-hash": "fbffccf21605dadf1c10546d2e4d4cd6",
     "packages": [
         {
             "name": "cakephp/core",
@@ -366,16 +366,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.7.23",
+            "version": "v5.7.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "ea3f30dd824bba52bcff4290dc7431b0ffb478e1"
+                "reference": "3e2810145f37eb89fa11759781ee88ee1c1a5262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/ea3f30dd824bba52bcff4290dc7431b0ffb478e1",
-                "reference": "ea3f30dd824bba52bcff4290dc7431b0ffb478e1",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/3e2810145f37eb89fa11759781ee88ee1c1a5262",
+                "reference": "3e2810145f37eb89fa11759781ee88ee1c1a5262",
                 "shasum": ""
             },
             "require": {
@@ -421,7 +421,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2019-01-07T13:39:07+00:00"
+            "time": "2019-02-12T07:57:07+00:00"
         },
         {
             "name": "illuminate/translation",
