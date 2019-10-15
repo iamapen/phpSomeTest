@@ -318,9 +318,15 @@ class PositiveIntegerTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame($ex, Hash::expand($arr));
     }
 
+    /**
+     * ドット区切りでアクセス。
+     * 設定ファイルやコンテナに使える。
+     */
     function testGet() {
         $arr = $this->getRecords();
         $this->assertSame($arr[2], Hash::get($arr, 2));
+
+        $this->assertSame('akane', Hash::get($arr, '2.firstName'));
     }
 
     function testNumeric() {
