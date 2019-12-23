@@ -125,6 +125,21 @@ class PositiveIntegerTest extends \PHPUnit\Framework\TestCase {
         // grouping
         $ex = [
             'female'=>[
+                '01' => ['id' => '01', 'lastName' => 'norimaki', 'firstName' => 'arare', 'gender' => 'female', 'age' => '18'],
+                '03' => ['id' => '03', 'lastName' => 'kimidori', 'firstName' => 'akane', 'gender' => 'female', 'age' => '18'],
+                '05' => ['id' => '05', 'lastName' => 'yamabuki', 'firstName' => 'midori', 'gender' => 'female', 'age' => '27'],
+            ],
+            'male'=>[
+                '02' => ['id' => '02', 'lastName' => 'soramame', 'firstName' => 'taro', 'gender' => 'male', 'age' => '20'],
+                '04' => ['id' => '04', 'lastName' => 'norimaki', 'firstName' => 'senbe', 'gender' => 'male', 'age' => '32'],
+            ],
+        ];
+        $this->assertSame($ex, Hash::combine($arr, '{n}.id', '{n}', '{n}.gender'));
+
+
+        // valueを特定カラムだけ
+        $ex = [
+            'female'=>[
                 '01'=>'arare', '03'=>'akane', '05'=>'midori',
             ],
             'male'=>[
