@@ -42,6 +42,18 @@ class PositiveIntegerTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame($ex, Hash::extract($arr, '{n}[lastName=/ki/].lastName'));
     }
 
+    function test_expression() {
+        $arr = [
+            1 => 'one', 2 => 'two',
+            'Three' => 'three', 'Four' => 'four'
+        ];
+
+        $this->assertSame(array_values($arr), Hash::extract($arr, '{*}'));
+        $this->assertSame(['one', 'two'], Hash::extract($arr, '{n}'));
+        $this->assertSame(['three', 'four'], Hash::extract($arr, '{s}'));
+        $this->assertSame(['three'], Hash::extract($arr, 'Three'));
+    }
+
     /**
      * ソート。よく使う。
      */
